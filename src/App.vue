@@ -14,7 +14,10 @@
       </ul>
     </nav>
     <Transition mode="out-in">
-      <component :is="currentTabComponent" />
+      <!--KeepAlive keeps the component alive, it will not lost data when switch tabs-->
+      <KeepAlive>
+        <component :is="currentTabComponent" />
+      </KeepAlive>
     </Transition>
 
   </main>
