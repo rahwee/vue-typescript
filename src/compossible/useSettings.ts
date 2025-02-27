@@ -1,5 +1,8 @@
 import { ref } from "vue"
 
+
+type Visibility = "public" | "private";
+
 interface GeneralSettings {
     about: string;
     country: string;
@@ -13,7 +16,7 @@ interface NotificationSettings {
     sms: boolean;
 }
 
-type Visibility = "public" | "private";
+
 interface PrivacySettings {
     visibility: Visibility;
     searchEngineIndex: boolean;
